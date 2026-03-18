@@ -65,6 +65,8 @@ For local development, Spring Security generates default credentials:
 - **Username**: `user`
 - **Password**: *(displayed in console output when running the application)*
 
+Note: I use a SecurityConfig class to disable Spring Security and permit all requests, it is meant to change later and I'll apply good security configurations. For now it is like this for development purposes.
+
 ## Project Architecture
 
 ```
