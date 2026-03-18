@@ -21,7 +21,15 @@ form.addEventListener("submit", async (e) => {
 
     const data = await response.json();
 
-    window.location.href = "/dashboard.html";
+    // Store user information in localStorage
+    localStorage.setItem('user', JSON.stringify(data));
+
+    // Redirect based on role
+    if (data.role === "ADMIN") {
+      window.location.href = "/admin-dashboard.html";
+    } else {
+      window.location.href = "/user-dashboard.html";
+    }
 
   } catch (error) {
     alert(error.message);
