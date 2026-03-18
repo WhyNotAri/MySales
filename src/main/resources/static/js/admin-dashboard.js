@@ -5,8 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     currentUser = requireAuth();
     if (!currentUser) return;
     
-    if (currentUser.role !== 'USER') {
-        window.location.href = '/admin-dashboard.html';
+    if (currentUser.role !== 'ADMIN') {
+        alert('Access denied. Admin privileges required.');
+        window.location.href = '/user-dashboard.html';
         return;
     }
     
@@ -34,7 +35,6 @@ async function loadProducts() {
     }
 }
 
-
 function renderProducts(productList) {
     const container = document.getElementById("product-container");
     container.innerHTML = productList.length === 0 ? "<p>No products found.</p>" : "";
@@ -51,30 +51,11 @@ function renderProducts(productList) {
             </div>
             <div class="product-actions">
                 <button class="btn-details">View Details</button>
-                <button class="btn-add">Add to Cart</button>
+                <button class="btn-add">Manage</button>
             </div>
         `;
-
-        card.querySelector('.btn-add').addEventListener("click", (e) => {
-            e.stopPropagation();
-            addToCart(product.id);
-        });
-
         container.appendChild(card);
     });
-}
-
-async function addToCart(productId) {
-    try {
-        await apiRequest(`/cart/${currentUser.id}/items`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ productId, quantity: 1 })
-        });
-        alert('Item added to cart!');
-    } catch (error) {
-        alert('Failed to add item to cart');
-    }
 }
 
 function initSearch() {

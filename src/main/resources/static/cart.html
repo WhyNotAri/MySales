@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shopping Cart">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <title>Shopping Cart</title>
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="user-dashboard.html">Web Sales</a>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="user-dashboard.html">Home</a></li>
+        <li><a href="cart.html">My Cart</a></li>
+        <li><a href="#">My Orders</a></li>
+        <li class="profile-link">
+          <a href="#" id="profileBtn">Profile
+            <img src="images/profile-icon.png" class="profile-icon">
+          </a>
+          <ul class="dropdown" id="profileMenu">
+            <li><a href="#">Settings</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<div class="cart-container">
+  <div class="cart-header">
+    <h1>Shopping Cart</h1>
+    <button id="clearCartBtn" class="remove-btn">Clear Cart</button>
+  </div>
+
+  <div id="cartContent">
+    <div class="empty-cart">
+      <h2>Loading cart...</h2>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Web Sales</h3>
+      <p>Your trusted online shopping destination for quality products.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 CSS. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/utils.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

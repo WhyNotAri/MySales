@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Web Sales User Dashboard">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <title>Dashboard</title>
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="user-dashboard.html">Web Sales</a>
+      </div>
+
+      <ul class="nav-links">
+        <li class="search-box">
+          <label for="searchInput" class="visually-hidden">Search products</label>
+          <input type="search" id="searchInput" placeholder="Search products">
+          <button id="searchBtn" aria-label="Search">🔍</button>
+        </li>
+        <li><a href="user-dashboard.html">Home</a></li>
+        <li><a href="cart.html">My Cart</a></li>
+        <li><a href="#">My Orders</a></li>
+        <li class="profile-link">
+          <a href="#" id="profileBtn">Profile
+            <img src="images/profile-icon.png" class="profile-icon">
+          </a>
+          <ul class="dropdown" id="profileMenu">
+            <li><a href="#">Settings</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1></h1>
+    <p>Discover our latest products and offers!</p>
+  </div>
+</section>
+
+<div class="filters">
+  <button class="filter-btn" data-category="all">All</button>
+  <button class="filter-btn" data-category="electronics">Electronics</button>
+  <button class="filter-btn" data-category="clothing">Clothing</button>
+  <button class="filter-btn" data-category="home">Home</button>
+</div>
+
+<main>
+  <section id="product-container" class="products"></section>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Web Sales</h3>
+      <p>Your trusted online shopping destination for quality products.</p>
+    </div>
+    <div class="footer-section">
+      <h4>About Us</h4>
+      <ul>
+        <li><a href="#">Who We Are</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Whatsapp</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Shipping Info</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 CSS. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/utils.js"></script>
+<script src="js/user-dashboard.js"></script>
+</body>
+</html>

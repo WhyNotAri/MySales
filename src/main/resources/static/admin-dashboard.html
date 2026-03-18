@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Web Sales Dashboard">
+    <meta name="description" content="Web Sales Admin Dashboard">
     <link rel="stylesheet" href="css/dashboard.css">
-    <title>Dashboard</title>
+    <title>Admin Dashboard</title>
 </head>
 <body>
     <header>
         <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <a href="dashboard.html">Web Sales</a>
+                <a href="admin-dashboard.html">Web Sales</a>
             </div>
 
             <ul class="nav-links">
@@ -21,15 +21,16 @@
                     <input type="search" id="searchInput" placeholder="Search products">
                     <button id="searchBtn" aria-label="Search">🔍</button>
                 </li>
-                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="admin-dashboard.html">Home</a></li>
                 <li><a href="#">View Orders</a></li>
+                <li><a href="#">Manage Users</a></li>
                 <li class="profile-link">
                     <a href="#" id="profileBtn">Profile
                         <img src="images/profile-icon.png" class="profile-icon">
                     </a>
                     <ul class="dropdown" id="profileMenu">
                         <li><a href="#">Settings</a></li>
-                        <li><a href="#">Logout</a></li>
+                        <li><a href="#" id="logoutBtn">Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -39,8 +40,8 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Welcome to Web Sales Dashboard</h1>
-            <p>Discover our latest products and offers!</p>
+            <h1></h1>
+            <p>Manage products, orders, and users!</p>
         </div>
     </section>
 
@@ -89,6 +90,7 @@
         </div>
     </footer>
 
-    <script src="js/dashboard.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/admin-dashboard.js"></script>
 </body>
 </html>
