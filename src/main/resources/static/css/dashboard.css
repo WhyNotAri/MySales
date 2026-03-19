@@ -13,7 +13,7 @@ body {
 header {
   background: linear-gradient(135deg, #0F4C75 0%, #3282B8 100%);
   color: white;
-  padding: 35px;
+  padding: 40px;
   text-align: center;
 }
 
@@ -32,7 +32,7 @@ header {
 }
 
 .logo {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bold;
   justify-content: center;
   align-items: center;

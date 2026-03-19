@@ -3,30 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Web Sales User Dashboard">
+  <meta name="description" content="Profile Settings">
   <link rel="stylesheet" href="css/dashboard.css">
-  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/profile-settings.css">
+  <title>Profile Settings</title>
 </head>
 <body>
+
+<!-- Header -->
 <header>
   <nav class="navbar">
     <div class="nav-container">
       <div class="logo">
         <a href="user-dashboard.html">Web Sales</a>
       </div>
-
       <ul class="nav-links">
-        <li class="search-box">
-          <label for="searchInput" class="visually-hidden">Search products</label>
-          <input type="search" id="searchInput" placeholder="Search products">
-          <button id="searchBtn" aria-label="Search">🔍</button>
-        </li>
         <li><a href="user-dashboard.html">Home</a></li>
         <li><a href="cart.html">My Cart</a></li>
         <li><a href="#">My Orders</a></li>
         <li class="profile-link">
           <a href="#" id="profileBtn">Profile
-            <img src="images/profile-picture.png" class="profile-icon" alt="Profile Picture">
+            <img src="images/profile-picture.png" class="profile-icon">
           </a>
           <ul class="dropdown" id="profileMenu">
             <li><a href="profile-settings.html">Settings</a></li>
@@ -38,24 +35,43 @@
   </nav>
 </header>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1></h1>
-    <p>Discover our latest products and offers!</p>
+<!-- Profile Settings section -->
+<section class="profile-settings">
+  <div class="container">
+    <div class="header">
+      <img class="profile-pic" src="images/profile-picture.png" alt="Profile Picture">
+      <h2 id="userName">Loading...</h2>
+    </div>
+    
+    <div class="info">
+      <h3>Profile Information</h3>
+      <div class="row">
+        <label>Email:</label>
+        <span id="userEmail">-</span>
+        <button class="edit-btn" onclick="editField('email', 'userEmail')">✎ Edit</button>
+      </div>
+      <div class="row">
+        <label>First Name:</label>
+        <span id="userFirstName">-</span>
+        <button class="edit-btn" onclick="editField('firstName', 'userFirstName')">✎ Edit</button>
+      </div>
+      <div class="row">
+        <label>Last Name:</label>
+        <span id="userLastName">-</span>
+        <button class="edit-btn" onclick="editField('lastName', 'userLastName')">✎ Edit</button>
+      </div>
+      <div class="row">
+        <label>Password:</label>
+      </div>
+      <div class="row">
+        <label>Role:</label>
+        <span id="userRole">-</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<div class="filters">
-  <button class="filter-btn" data-category="all">All</button>
-  <button class="filter-btn" data-category="electronics">Electronics</button>
-  <button class="filter-btn" data-category="clothing">Clothing</button>
-  <button class="filter-btn" data-category="home">Home</button>
-</div>
-
-<main>
-  <section id="product-container" class="products"></section>
-</main>
-
+<!-- Footer -->
 <footer>
   <div class="footer-content">
     <div class="footer-section">
@@ -90,7 +106,10 @@
   </div>
 </footer>
 
+
+<!-- Scripts -->
 <script src="js/utils.js"></script>
-<script src="js/user-dashboard.js"></script>
+<script src="js/profile-settings.js"></script>
+
 </body>
 </html>
