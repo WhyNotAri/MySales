@@ -43,11 +43,14 @@ function renderProducts(productList) {
         const card = document.createElement("div");
         card.classList.add("product-card");
         card.innerHTML = `
+            <div class="category-container">
+                <button class="btn-category">${product.category}</button>
+            </div>
+            
             <img src="http://localhost:8080/images/${product.image}" alt="${product.name}">
             <div class="product-info">
                 <h4 class="product-name">${product.name}</h4>
                 <p class="product-price">$${product.price}</p>
-                <button class="btn-category">${product.category}</button>
             </div>
             <div class="product-actions">
                 <button class="btn-details">View Details</button>

@@ -1,144 +1,129 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f8f8f8;
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f8f8;
 }
 
+/* Register form */
 .register-div {
-    width: 100%;
-    max-width: 500px;
-    padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
 }
 
 .register-form {
-    padding: 25px;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background: white;
-    font-size: 15px;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: white;
+  font-size: 15px;
 }
 
 .register-form h1 {
-    text-align: center;
-    margin: 0;
-    font-size: 24px;
-    color: #0F4C75;
+  text-align: center;
+  margin: 0;
+  font-size: 24px;
+  color: #0F4C75;
 }
 
-.email-field {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+/* Form fields */
+.email-field,
+.password-field,
+.confirm-password-field,
+.first-name-field,
+.last-name-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .name-fields {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
-}
-
-.first-name-field {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.last-name-field {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
 }
 
 input {
-    padding: 12px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    font-size: 14px;
-    transition: 0.2s;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
 }
 
 input:focus {
-    border-color: #00B4DB;
-    outline: none;
+  border-color: #00B4DB;
+  outline: none;
 }
 
-.password-field {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.confirm-password-field {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
+/* Form options */
 .options {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-}
-
-.submit-button {
-    padding: 12px;
-    border-radius: 12px;
-    border: none;
-    background: #0F4C75;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.submit-button:hover {
-    background: #00B4DB;
-}
-
-.options {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 5px 0;
 }
 
 .options a {
-    color: #0F4C75;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
+  color: #0F4C75;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .options a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .login-option {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    font-size: 14px;
-    padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-size: 14px;
+  padding: 5px 0;
 }
 
 .login-option a {
-    color: #0F4C75;
-    font-weight: 600;
-    text-decoration: none;
+  color: #0F4C75;
+  font-weight: 600;
+  text-decoration: none;
 }
 
+.login-option a:hover {
+  text-decoration: underline;
+}
+
+/* Submit button */
+.submit-button {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: #0F4C75;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.submit-button:hover {
+  background: #00B4DB;
+}
+
+/* Media */
 @media (max-width: 480px) {
-    .name-fields {
-        grid-template-columns: 1fr;
-    }
+  .name-fields {
+    grid-template-columns: 1fr;
+  }
 }
