@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Add Product">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/addProduct.css">
+  <title>Add Product</title>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="admin-dashboard.html">Web Sales</a>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="admin-dashboard.html">Home</a></li>
+        <li><a href="#">View Orders</a></li>
+        <li><a href="#">Manage Users</a></li>
+        <li class="profile-link">
+          <a href="#" id="profileBtn">Profile
+            <img src="images/profile-picture.png" class="profile-icon" alt="Profile Picture">
+          </a>
+          <ul class="dropdown" id="profileMenu">
+            <li><a href="#">Settings</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- Form -->
+<form class="add-form" id="addProductForm">
+  <label for="productName">Product Name</label>
+  <input type="text" name="productName" id="productName" placeholder="Enter Product Name" required>
+
+  <label for="productDescription">Product Description</label>
+  <input type="text" name="productDescription" id="productDescription" placeholder="Enter Product Description" required>
+
+  <label for="productPrice">Product Price</label>
+  <input type="number" name="productPrice" id="productPrice" placeholder="Enter Product Price" step="0.01" min="0" required>
+
+  <label for="productStock">Product Stock</label>
+  <input type="number" name="productStock" id="productStock" placeholder="Enter Product Stock" min="0" required>
+
+  <label for="productImage">Product Image URL</label>
+  <input type="text" name="productImage" id="productImage" placeholder="Enter Product Image URL" required>
+
+  <label for="productCategory">Product Category</label>
+  <select name="productCategory" id="productCategory" required>
+    <option value="">Select a category</option>
+    <option value="Electronics">Electronics</option>
+    <option value="Sports">Sports</option>
+    <option value="Food">Food</option>
+    <option value="Home">Home</option>
+  </select>
+
+  <button type="submit">Add Product</button>
+</form>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Web Sales</h3>
+      <p>Your trusted online shopping destination for quality products.</p>
+    </div>
+    <div class="footer-section">
+      <h4>About Us</h4>
+      <ul>
+        <li><a href="#">Who We Are</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">WhatsApp</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Shipping Info</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="js/utils.js"></script>
+<script src="js/add-product.js"></script>
+</body>
+</html>

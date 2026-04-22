@@ -53,8 +53,8 @@ function renderProducts(productList) {
                 <p class="product-price">$${product.price}</p>
             </div>
             <div class="product-actions">
-                <button class="btn-details">View Details</button>
                 <button class="btn-add">Manage</button>
+                <button class="btn-details">Details</button>
             </div>
         `;
         container.appendChild(card);
