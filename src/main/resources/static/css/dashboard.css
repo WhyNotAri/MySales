@@ -272,6 +272,33 @@ header {
   color: white;
 }
 
+.product-management {
+  display: flex;
+  margin-left: 30px;
+  width: 100%;
+  gap: 8px;
+  padding: 10px;
+}
+
+.product-management a {
+  font-size: 13px;
+  text-decoration: none;
+  color: white;
+  padding: 4px;
+  border-radius: 12px;
+  font-weight: bolder;
+}
+
+.add-product {
+  display: flex;
+  gap: 8px;
+  width: auto;
+  background: #00C853;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+}
+
 /* Main content */
 main {
   padding: 10px;
